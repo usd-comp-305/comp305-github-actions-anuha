@@ -1,13 +1,13 @@
 package edu.sandiego.comp305;
 
 public class StringUtils {
-    public static String reverseString(String strToReverse) {
-        String reversedStr = "";
+    public static String reverseString(final String strToReverse) {
+        StringBuilder reversedStr = new StringBuilder();
 
         for (int i = strToReverse.length() - 1; i >= 0; i--) {
-            reversedStr += strToReverse.charAt(i);
+            reversedStr.append(strToReverse.charAt(i));
         }
 
-        return reversedStr;
+        return reversedStr.toString();
     }
 }
